@@ -110,3 +110,49 @@ a {
     border-radius: 0.25rem;
     outline: none;
 }
+
+#contextMenu {
+    position: fixed;
+    top:0;
+    left:0;
+    width:100px;
+    display: none;
+}
+
+#contextMenu.on {
+    display: block;    
+}
+
+#contextMenu.on.visible > ul > li{
+    height: 35px;
+    opacity: 1;
+}
+
+#contextMenu > ul {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    border-radius:5px;
+    overflow: hidden;
+}
+#contextMenu > ul > li {
+    transition: all 0.4s;
+    opacity: 0;
+    height: 0;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #66bb6a;
+    color:#fff;
+    border-bottom:1px solid #fff;
+
+}
+
+#contextMenu > ul > li:hover {
+    background-color: #a5d6a7;
+}
+
+#contextMenu > ul > li:last-child {
+    border-bottom:none;
+}
